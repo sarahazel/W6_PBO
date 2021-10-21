@@ -1,0 +1,46 @@
+//import java.io.*;
+import java.util.*;
+
+//kelas song
+class song{
+    public String title;
+    public String singer;
+    
+    song (String title, String singer){
+        this.title = title;
+        this.singer = singer;
+    }
+}
+
+//kelas producer
+class producers{
+    private final List<song> songs;
+    
+    producers (List<song> songs){
+        this.songs = songs;
+    }
+    
+    public List<song> HowManySongsProducersMake(){
+        return songs;
+    }
+}
+//main
+public class Agregation {
+
+    public static void main(String[] args) {
+        song A1 = new song ("Best Mistakes","Ariana Grande");
+        song A2 = new song ("Thank u,next", "Ariana Grande");
+        
+        List<song> songs = new ArrayList<song>();
+        songs.add(A1);
+        songs.add(A2);
+        
+        producers Producer = new producers (songs);
+        
+        List<song> lagu = Producer.HowManySongsProducersMake();
+        lagu.forEach(lg -> {
+            System.out.println("Title : " + lg.title + " oleh " + "singer ; " + lg.singer);
+        });
+    }
+    
+}
