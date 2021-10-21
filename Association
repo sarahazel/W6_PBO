@@ -1,0 +1,38 @@
+import java.io.*;
+
+//kelas bus
+class Angkutan{
+    private String profesi;
+    
+    Angkutan (String profesi){
+        this.profesi = profesi;
+    }
+    
+    public String getAngkutanProfesi(){
+        return this.profesi;
+    }
+}
+
+//kelas profesi
+class profesi{
+    private String name;
+    
+    profesi (String name){
+        this.name = name;
+    }
+    
+    public String getProfesiName(){
+        return this.name;
+    }
+}
+
+//main
+public class Association {
+    
+    public static void main (String[] args){
+        Angkutan Bus = new Angkutan ("Bus");
+        profesi A = new profesi ("pelajar");
+        
+        System.out.println(A.getProfesiName()+ " berada di dalam " + Bus.getAngkutanProfesi());
+    }
+}
