@@ -39,7 +39,7 @@ public class Agregation {
         
         List<song> lagu = Producer.HowManySongsProducersMake();
         lagu.forEach(lg -> {
-            System.out.println("Title : " + lg.title + " oleh " + "singer ; " + lg.singer);
+           System.out.println("" + lg.title + " dinyanyikan oleh" + " " + lg.singer);
         });
     }
     
